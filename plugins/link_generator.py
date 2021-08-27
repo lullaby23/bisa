@@ -36,7 +36,7 @@ async def batch(client: Client, message: Message):
     string = f"get-{f_msg_id * abs(client.db_channel.id)}-{s_msg_id * abs(client.db_channel.id)}"
     base64_string = await encode(string)
 reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
-    await second_message.reply_text(f"<b></b>\n\n{link}", quote=False, reply_markup=reply_markup)
+   await reply_text.edit(f"{link}", disable_web_page_preview = True)
 
 
 @Bot.on_message(filters.private & filters.user(ADMINS) & filters.command('genlink'))
