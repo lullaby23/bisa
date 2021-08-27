@@ -35,7 +35,7 @@
     },
     "START_MESSAGE": {
       "description": "Optional: start message of bot, use HTML parsemode format",
-      "value": "Hello {first}\nDapatkan link video di <a href="linkch/group">Di Sini</a>"
+      "value": "Hello {first}\nDapatkan link video di <a href='linkch/group'>Di Sini</a>"
     },
     "ADMINS": {
       "description": "ID Admin, Akun yang bisa menggunakan bot untuk mendapatkan link.",
