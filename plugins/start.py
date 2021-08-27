@@ -101,7 +101,7 @@ async def not_joined(client: Client, message: Message):
     except ValueError:
         pass
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel 🔑", url = client.invitelink),
-                                         InlineKeyboardButton("Refresh", url = https://t.me/{client.username}?start={argument}) ]])
+                                         InlineKeyboardButton("Refresh", command, argument = https://t.me/{client.username}?start={argument}) ]])
 
     await message.reply(
         text = text,
