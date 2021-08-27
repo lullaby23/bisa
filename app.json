@@ -36,7 +36,7 @@
     },
     "START_MESSAGE": {
       "description": "Optional: start message of bot, use HTML parsemode format",
-      "value": "Hello {first}\n\n Saya berguna untuk memberikan file video dari channel bot ini, dapatkan link dari channel bot ini."
+      "value": "Hello {first}\nDapatkan link Video di <b><a href="https://t.me/foryoubabes1">Sini</a></b>."
     },
     "ADMINS": {
       "description": "ID Admin, Akun yang bisa menggunakan bot untuk mendapatkan link.",
