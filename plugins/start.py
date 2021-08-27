@@ -40,11 +40,11 @@ async def start_command(client: Client, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except:
                 return
-        temp_msg = await message.reply("Please wait...")
+        temp_msg = await message.reply("Tunggu Sebentar...")
         try:
             messages = await get_messages(client, ids)
         except:
-            await message.reply_text("Something went wrong..!")
+            await message.reply_text("Bot Eror..!")
             return
         await temp_msg.delete()
 
@@ -73,7 +73,7 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("Close", callback_data = "close")
                 ]
             ]
         )
@@ -93,14 +93,16 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b>Kamu Harus Join Channel Dulu \n\n Baru bisa akses video</b>"
+    text = "<b>Kamu Harus Join Channel Atau Group Terlebih Dahulu \nUntuk Akses File Atau Video</b>"
     message_text = message.text
     try:
         command, argument = message_text.split()
-        text = text + f" <b>lalu <a href='https://t.me/{client.username}?start={argument}'>coba lagi</a></b>"
+        text = text + f" <b>lalu tekan tombol coba lagi <a href='https://t.me/{client.username}?start={argument}'>coba lagi</a></b>"
     except ValueError:
         pass
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel 🔑", url = client.invitelink)]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel 🔑", url = client.invitelink),
+                                         InlineKeyboardButton("Refresh", url = https://t.me/{client.username}?start={argument}) ]])
+
     await message.reply(
         text = text,
         reply_markup = reply_markup,
