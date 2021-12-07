@@ -19,7 +19,7 @@ OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 
 
 
-USER_BOT = int(os.environ.get("USER_BOT", ""))
+USER_BOT = int(os.environ.get("USER_BOT", "usernamebot"))
 
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
